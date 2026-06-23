@@ -1,0 +1,34 @@
+Requirements:
+    Support for basic math operations
+        - add
+        - subtract
+        - multiply
+        - divide
+    Operate function
+        - operate(operator, num1, num2)
+        - takes in an operator and two numbers
+        - switch statement on operator to determine which operation to call
+        - called when equal sign is hit OR for special case below
+    Global variables
+        - need global variables told hold numbers and operator
+    Special cases
+        - display 0 by default
+        - If 2 numbers and an operator have already been stored, and another operator
+        button is hit, need to evaluate first pair as value 1. Then treat next number after
+        second operator as value 2
+        EX: (12 + 7) - 1
+        12 + 7 should evaluate to 19. Then 19 - 1 is performed
+        - if multiple operator buttons are hit in a row, should only account for the 
+        last button
+        2 + - 3
+        Should be treated as 2 - 3 (the + is ignored)
+        - Need to round answers w/ long decimals
+        - throw error when = is hit before 2 numbers and an operator have been entered
+        - throw error when user tries to divide by 0
+        - clear button clears display (reset to 0) and global variables. 
+        - after result is displayed, typing additional numbers shouldn't append
+        BUT if you hit an operator, the previous result is still used
+    Extra Credit
+        - Add a decimal button and ensure only single decimal can be stored
+        - Add a backspace button so user can undo previous input
+        - Add keyboard support
