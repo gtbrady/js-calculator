@@ -10,7 +10,7 @@ Requirements:
         - switch statement on operator to determine which operation to call
         - called when equal sign is hit OR for special case below
     Global variables
-        - need global variables told hold numbers and operator
+        - need global variables to hold numbers and operator
     Special cases
         - display 0 by default
         - If 2 numbers and an operator have already been stored, and another operator
