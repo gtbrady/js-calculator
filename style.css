@@ -15,4 +15,14 @@ body {
     border: 1px solid black;
     border-radius: 12px;
     display:flex;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+
+.output{
+    background-color: white;
+    text-align: right;
+    padding: 10px;
+    border-radius: 6px;
 }
