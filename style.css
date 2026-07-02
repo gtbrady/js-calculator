@@ -9,8 +9,6 @@ body {
 }
 
 .main-container {
-    height: 640px;
-    width: 512px;
     background-color: lightgray;
     border: 1px solid black;
     border-radius: 12px;
@@ -23,6 +21,44 @@ body {
 .output{
     background-color: white;
     text-align: right;
+    font-size: 36px;
     padding: 10px;
     border-radius: 6px;
+}
+
+.main-button-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap:7px;
+    margin: 10px;
+    
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.equal-button {
+    flex-grow: 1;
+    background-color: yellow;
+}
+
+.clear-button {
+    background-color: orangered;
+}
+
+.number-button {
+    background-color: lightgrey;
+}
+
+.other-button {
+    background-color: lightslategray;
+}
+
+button {
+    padding: 12px 24px; /* Top/Bottom Left/Right */
+    font-size: 24px;
+    border-radius:6px;
 }
