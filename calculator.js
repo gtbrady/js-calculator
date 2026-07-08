@@ -31,6 +31,12 @@ const backspaceButton = document.getElementById("btn-backspace");
 
 //class selected buttons
 const clearButton = document.querySelector(".clear-button");
+clearButton.addEventListener("click", () => {
+    clearGlobalVariables();
+    outputDisplay.textContent = "0";
+});
+
+
 const equalButton = document.querySelector(".equal-button");
 
 
@@ -74,4 +80,10 @@ function operate(operator, num1, num2) {
             console.log("Invalid operator");
     }
     return result;
+}
+
+function clearGlobalVariables() {
+    globalNumberOne = null;
+    globalNumberTwo = null;
+    globalOperator = null;
 }

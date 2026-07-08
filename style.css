@@ -9,12 +9,13 @@ body {
 }
 
 .main-container {
-    background-color: lightgray;
+    background-color: lightslategray;
     border: 1px solid black;
     border-radius: 12px;
     display:flex;
     flex-direction: column;
     padding: 10px;
+    gap:8px;
     
 }
 
@@ -23,13 +24,14 @@ body {
     text-align: right;
     font-size: 36px;
     padding: 10px;
+    margin: 5px 10px 0px 10px;
     border-radius: 6px;
 }
 
 .main-button-container {
     display: flex;
     justify-content: space-evenly;
-    gap:7px;
+    gap:10px;
     margin: 10px;
     
 }
@@ -37,28 +39,32 @@ body {
 .button-container{
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 10px;
 }
 
 .equal-button {
     flex-grow: 1;
-    background-color: yellow;
+    background-color: #B74F09;
 }
 
 .clear-button {
-    background-color: orangered;
+    background-color: #8B1313;
 }
 
 .number-button {
-    background-color: lightgrey;
+    background-color: #5C595B;
+    
 }
 
 .other-button {
-    background-color: lightslategray;
+    background-color: #695166;
 }
 
 button {
     padding: 12px 24px; /* Top/Bottom Left/Right */
     font-size: 24px;
+    color:white;
     border-radius:6px;
+    min-height: 81px;
+    min-width: 81px;
 }
