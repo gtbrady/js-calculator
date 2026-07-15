@@ -17,6 +17,18 @@ const numButton7 = document.getElementById("btn-7");
 const numButton8 = document.getElementById("btn-8");
 const numButton9 = document.getElementById("btn-9");
 const numButton0 = document.getElementById("btn-0");
+const numButtons = document.querySelectorAll(".number-button");
+
+numButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        if(outputDisplay.textContent === "0") {
+            outputDisplay.textContent = button.textContent;  
+        } else {
+            outputDisplay.textContent += button.textContent;
+        }
+        
+    });
+});
 
 //operators
 const divideButton = document.getElementById("btn-divide");
