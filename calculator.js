@@ -30,6 +30,18 @@ numButtons.forEach((button) => {
     });
 });
 
+/**
+ TODO
+ change operator class name to "operator-button" in html/css
+ add buttons to list
+ operator handling
+ global var handling
+ equal button handling
+ decimal button handling
+ +/- button handling
+ start going through got12chas section
+ */
+
 //operators
 const divideButton = document.getElementById("btn-divide");
 const multiplyButton = document.getElementById("btn-multiply");
@@ -39,7 +51,16 @@ const addButton = document.getElementById("btn-add");
 //other buttons
 const negationButton = document.getElementById("btn-negation");
 const decimalButton = document.getElementById("btn-decimal");
+
 const backspaceButton = document.getElementById("btn-backspace");
+backspaceButton.addEventListener("click", ()=> {
+    if(outputDisplay.textContent.length === 1) {
+        outputDisplay.textContent = 0;
+    } else {
+        outputDisplay.textContent = outputDisplay.textContent.slice(0,-1);
+    }
+    
+});
 
 //class selected buttons
 const clearButton = document.querySelector(".clear-button");

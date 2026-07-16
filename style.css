@@ -56,7 +56,7 @@ body {
     
 }
 
-.other-button {
+.other-button, .operator-button {
     background-color: #695166;
 }
 
