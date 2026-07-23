@@ -32,14 +32,12 @@ numButtons.forEach((button) => {
 
 /**
  TODO
- change operator class name to "operator-button" in html/css
- add buttons to list
  operator handling
  global var handling
  equal button handling
  decimal button handling
  +/- button handling
- start going through got12chas section
+ start going through gotchas section
  */
 
 //operators
@@ -47,6 +45,12 @@ const divideButton = document.getElementById("btn-divide");
 const multiplyButton = document.getElementById("btn-multiply");
 const subtractButton = document.getElementById("btn-subtract");
 const addButton = document.getElementById("btn-add");
+const operatorButtons = document.querySelectorAll(".operator-button");
+operatorButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        globalOperator = button.textContent;
+    });
+});
 
 //other buttons
 const negationButton = document.getElementById("btn-negation");
@@ -71,6 +75,7 @@ clearButton.addEventListener("click", () => {
 
 
 const equalButton = document.querySelector(".equal-button");
+// set globalnumbertwo, then run operate w/ global vars. nums parsed
 
 
 function add(num1, num2) {
@@ -106,7 +111,7 @@ function operate(operator, num1, num2) {
         case "*":
             result = multiply(num1, num2);
             break;
-        case "/":
+        case "÷":
             result = divide(num1, num2);
             break;
         default:
