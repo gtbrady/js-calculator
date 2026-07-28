@@ -1,38 +1,63 @@
 //global
-let globalNumberOne;
-let globalNumberTwo;
-let globalOperator;
+const logic = {
+    firstNumber: "",
+    secondNumber: "",
+    operator: "",
+    writeToSecond: false,
+
+    clearGlobalVariables() {
+        this.firstNumber = "";
+        this.secondNumber = "";
+        this.globalOperator = "";
+        this.writeToSecond = false;
+    },
+    updateNumber(inputNumber) {
+        if(!this.writeToSecond) {
+            this.firstNumber += inputNumber;
+            return inputNumber;
+        } else {
+            this.secondNumber += inputNumber;
+            return inputNumber;
+        }
+    }
+
+}
+
 
 //display
 const outputDisplay = document.querySelector(".output");
 
 //number keys
-const numButton1 = document.getElementById("btn-1");
-const numButton2 = document.getElementById("btn-2");
-const numButton3 = document.getElementById("btn-3");
-const numButton4 = document.getElementById("btn-4");
-const numButton5 = document.getElementById("btn-5");
-const numButton6 = document.getElementById("btn-6");
-const numButton7 = document.getElementById("btn-7");
-const numButton8 = document.getElementById("btn-8");
-const numButton9 = document.getElementById("btn-9");
-const numButton0 = document.getElementById("btn-0");
 const numButtons = document.querySelectorAll(".number-button");
+
+/*
+Append or Replace
+Global Num one or two
+write to global/output
+ */
 
 numButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        if(outputDisplay.textContent === "0") {
-            outputDisplay.textContent = button.textContent;  
-        } else {
-            outputDisplay.textContent += button.textContent;
-        }
-        
+        const input = Number(button.textContent);
+            if(outputDisplay.textContent === "0") {
+                outputDisplay.textContent = logic.updateNumber(input);
+            } else {
+                outputDisplay.textContent += logic.updateNumber(input);
+            }
+            
     });
 });
 
+function appendOrReplace() {
+
+}
+
+function globalOneOrTwo() {
+    
+}
+
 /**
  TODO
- operator handling
  global var handling
  equal button handling
  decimal button handling
@@ -41,10 +66,6 @@ numButtons.forEach((button) => {
  */
 
 //operators
-const divideButton = document.getElementById("btn-divide");
-const multiplyButton = document.getElementById("btn-multiply");
-const subtractButton = document.getElementById("btn-subtract");
-const addButton = document.getElementById("btn-add");
 const operatorButtons = document.querySelectorAll(".operator-button");
 operatorButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -69,7 +90,7 @@ backspaceButton.addEventListener("click", ()=> {
 //class selected buttons
 const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", () => {
-    clearGlobalVariables();
+    logic.clearGlobalVariables();
     outputDisplay.textContent = "0";
 });
 
@@ -120,8 +141,4 @@ function operate(operator, num1, num2) {
     return result;
 }
 
-function clearGlobalVariables() {
-    globalNumberOne = null;
-    globalNumberTwo = null;
-    globalOperator = null;
-}
+
